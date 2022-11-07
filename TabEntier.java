@@ -26,7 +26,7 @@ public class TabEntier{
       res.setElement(i, elements[i]);
     }
     for(int i = taille ; i < taille + t.getTaille() ; i++){
-      res.setElement(i, elements[i]);
+      res.setElement(i, elements[i-taille]);
     }
     return res;
   }
