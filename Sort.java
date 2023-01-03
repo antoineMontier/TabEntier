@@ -1,4 +1,4 @@
-public class BubbleSort{
+public class Sort{
     public static  void main(String[] args){
         System.out.println("hey");
     }
@@ -19,6 +19,16 @@ public class BubbleSort{
                 break;
             }
         }
+    }
+
+    public static int maxIndex(int[] array){
+        int index = 0;
+        for(int i = 0 ; i < array.length; i++){
+            if(array[index] < array[i]){
+                index = i;
+            }
+        }
+        return index;
     }
     
 }
