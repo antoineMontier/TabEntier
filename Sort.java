@@ -50,6 +50,38 @@ public class Sort{
         }
         return maxIndex;
     }
+
+    public static int max(int a, int b) {
+        if(a < b) {
+            return b;
+        }
+        return a;
+    }
+
+    public static boolean contains(int[] array, int value) {
+        for(int i = 0; i < array.length; i++) {
+            if(array[i] == value) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static int[] similarities(int[] a, int[] b) {
+        int[] res = new int[max(a.length, b.length)];
+        int index = 0;
+        for(int i = 0; i < a.length; i++) {
+            for(int j = 0; j < b.length; j++) {
+                if(a[i] != b[j] || contains(res, a[i])) {
+                    j = b.length;//stop the loop
+                }else if(j == b.length - 1){//every tests passed
+                    res[index] = a[i];
+                    index++;
+                }
+            }
+        }
+        return res;
+    }
     
     
     
