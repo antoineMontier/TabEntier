@@ -101,5 +101,14 @@ public class Sort{
         }
         return count;
     }
+
+    public static float average(int[] array){
+        float res = 0;
+        for(int i = 0; i < array.length; i++){
+            res += array[i];
+        }
+        res /= (float)(array.length - 1);
+        return res;
+    }
     
 }
